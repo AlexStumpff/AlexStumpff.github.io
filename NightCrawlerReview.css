@@ -1,0 +1,64 @@
+p {font-size: 70px;}
+
+.rotated {
+    background-color: pink;
+    width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    }
+
+table{
+    font-size: 200px;
+}
+tr#reviewTable{
+    background-color:gray;
+    font-size: 100px;
+}
+
+
+body.italicBodyInherit{
+    font-size: large;
+}
+
+main {
+    flex: 1;
+    background-color: rgb(168, 157, 157);
+    display: flex;
+    justify-content: space-between;
+    outline: 1px solid black; /*for easy visualisation */
+    margin-top: 15px;
+  }
+
+table{
+    font-size: larger;
+}
+.flex_element{
+    padding: 10px; 
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 100px;
+    align-items: center;
+    padding: 20px;
+}
+
+select{
+    width: 250px;
+    height: 150px;
+    font-size: larger;
+}
+
+input{
+    font-size: 60px;
+    width: 800px;
+    }
+
+.reviews{
+    background-color: cyan;
+    font-size: large;
+
+}

@@ -1,0 +1,92 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr .5fr;
+    grid-gap: 10px;
+}
+.websiteHeader {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    background-color: #333;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr .5fr;
+}
+
+#title{
+    grid-column: 1;
+    color: #fff;
+    text-align: center;
+    font-size: 360px;
+    font-weight: bold;
+}
+
+#criticLogo{
+    grid-column: 2;
+    max-width:50%;
+    max-height:50%;
+}
+
+.box {
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+.allMovies {
+    grid-row: 3;
+    grid-column: 1;
+}
+
+.RecentlyReviewed {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.movie-list-recently-reviewed {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px;
+    grid-column-gap: 10px;
+}
+
+.movie {
+    border: 1px solid #ccc;
+    padding: 1px;
+    text-align: center;
+    max-width: 500px;
+    background-color: #fff;
+}
+
+.poster {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.favoriteMovies {
+    grid-row: 2 / span 2;
+    grid-column: 2;
+}
+
+.movie-favorite {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    align-items: center;
+  }
+  
+  .movie-favorite img,
+  .movie-favorite video {
+    display: inline-block;
+  }
+  
+  .movie-favorite img {
+    width: 500px;
+    margin-right: 10px;
+  }
+  
+  .movie-favorite video {
+    width: 500px;
+    margin-left: 10px;
+  }

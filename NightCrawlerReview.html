@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="NightCrawlerReview.css">
+    <title>A simple HTML document</title>
+</head>
+<body class="italicBodyInherit">
+<main>
+  <div class="flexLeft">
+    <italicBodyInherit>
+      <p>"Nightcrawler" is a riveting and intense film that captivates the audience with its dark and thrilling narrative. This movie, directed by Dan Gilroy and released in 2014, stars Jake Gyllenhaal as the protagonist, Louis Bloom, a driven and ambitious freelance videographer who chases crime scenes in Los Angeles to capture footage that he can sell to news channels.<p>
+      <p>One of the strengths of the film is its ability to keep the audience engaged from beginning to end. The storyline is fast-paced and unpredictable, with Louis Bloom's character development taking the spotlight as the film progresses. Jake Gyllenhaal's performance as Louis is impressive, as he masterfully portrays the character's sociopathic tendencies and lack of empathy in a chilling and believable manner.</p>
+      <p>Furthermore, the movie raises ethical questions about the media and the line between reporting the news and exploiting tragedy for profit. It's a thought-provoking commentary on the state of contemporary journalism, and the film's critique of the sensationalist and voyeuristic tendencies of the media industry is powerful and relevant.</p>
+  </div>
+  <div class="flexRight">
+    <img class="rotated" src="https://th.bing.com/th/id/OIP.HE5JqFdyOxA0jlXX3OYMmQHaLH?pid=ImgDet&rs=1">
+    <table>
+      <tr id="reviewTable">
+        <th>Story</th>
+        <th>Acting</th>
+        <th>Cinematography</th>
+      </tr>
+      <tr>
+        <td style="font-size: 100px;">9</td>
+        <td style="font-size: 100px;">9</td>
+        <td style="font-size: 100px;">9</td>
+      </tr>
+      <tr id="reviewTable">
+        <td>Raw, gripping</td>
+        <td>Jake at his best</td>
+        <td>Felt like I was there</td>
+      </tr>
+    </table>
+  </div>
+</main>
+
+<div class="formContainer">
+    <form class="reviewForm">
+      Enter your Email  
+      <input type="text" name="email" id="email">
+      <br>
+  
+      <label for="side">Choose your own rating:</label>
+
+      <select name="rating" id="rating">
+        <option value="5">5</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1</option>
+      </select>
+      <br>
+
+      <label for="comment">Comment:</label>
+      <textarea style="height:150px;width:900px;font-size: 60px;" id="comment" name="comment"></textarea><br><br>
+
+      <input type="reset">
+      <button type="button" style="height:150px;width:400px;font-size: larger;" onclick="submitReview()">Submit</button>
+    </form>
+</div>
+    <div class="reviews" id="review"></div>
+
+    <script>
+      function submitReview() {
+        var email = document.getElementById("email").value;
+        var rating = document.getElementById("rating").value;
+        var comment = document.getElementById("comment").value;
+
+        var review = document.getElementById("review");
+        review.innerHTML = "<p>Email: " + email + "</p><p>Rating: " + rating + "/5 <p> and the user said this about the film " + comment + "</p></p>";
+        var numLetters = comment.replace(/[^a-z]/gi, '').length;
+        alert("Your comment has " + numLetters + " letters. Thanks for the comment!");
+      }
+    </script>
+
+</body>
+</html>
