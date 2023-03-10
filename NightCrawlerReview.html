@@ -67,7 +67,7 @@
         var comment = document.getElementById("comment").value;
 
         var review = document.getElementById("review");
-        review.innerHTML = "<p>Email: " + email + "</p><p>Rating: " + rating + "/5 <p> and the user said this about the film " + comment + "</p></p>";
+        review.innerHTML = "<p>Email: " + email + "</p><p>Rating: " + rating + "/5 <p> User Commented: " + comment + "</p></p>";
         var numLetters = comment.replace(/[^a-z]/gi, '').length;
         alert("Your comment has " + numLetters + " letters. Thanks for the comment!");
       }

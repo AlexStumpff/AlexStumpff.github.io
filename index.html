@@ -2,14 +2,28 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="BearCaveCritics.css">
+  <script src="ToggleDarkMode.js"></script>
     <title>Alex Stumpff's Movie Review Website Main Page</title>
 </head>
 <body>
 	<div class="container">
-        <div class="websiteHeader">
-            <div id="title"> Bear Cave Critic </div>
-                <img id="criticLogo" src="MoviePics/BearPaw.png" alt="Image">
+    <div id="websiteHeader" class="websiteHeader">
+        <div id="title"> Bear Cave Critic </div>
+            <img id="criticLogo" src="MoviePics/BearPaw.png" alt="Image">
+    </div>
+    <nav>
+      <ul>
+        <div class="dropdown">
+          <button class="dropbtn">Settings &#9776;</button>
+          <div class="dropdown-content">
+            <button onclick="changeBackgroundMode()" class="darkmodebtn">Toggle Dark Mode</button>
+          </div>
         </div>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
 		<div class="box FavoriteMovies">
       <h2>FavoriteMovies</h2>
       <div class="movie-favorite">

@@ -31,13 +31,72 @@
     padding: 10px;
 }
 
+nav{
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin: 0 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropbtn:hover {
+    background-color: #b5a0a0;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #f5f5f5;
+    min-width: 160px;
+    border: 1px solid black;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .darkmodebtn{
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+  .darkmodebtn:hover {
+    background-color: #ccc;
+  }
+
 .allMovies {
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 1;
 }
 
 .RecentlyReviewed {
-    grid-row: 2;
+    grid-row: 3;
     grid-column: 1;
 }
 
