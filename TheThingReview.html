@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie Review</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+		.poster {
+			flex-basis: 50%;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+		.poster img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+			margin: 0 auto;
+		}
+		.description {
+			flex-basis: 50%;
+			padding: 20px;
+			box-sizing: border-box;
+			font-size: 18px;
+			line-height: 1.5;
+		}
+		table {
+			margin-top: 20px;
+			border-collapse: collapse;
+			width: 100%;
+		}
+		th, td {
+			padding: 8px;
+			text-align: left;
+			border-bottom: 1px solid #ddd;
+		}
+		th {
+			background-color: #f2f2f2;
+		}
+        .formContainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 20px;
+            align-items: center;
+            padding: 20px;
+        }
+
+        select{
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+
+        input{
+            font-size: 60px;
+            width: 800px;
+            }
+
+        .reviews{
+            border:1px solid black;
+            width:800px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="poster">
+			<img src="MoviePics/TheThing.jpg" alt="Movie Poster">
+		</div>
+		<div class="description">
+			<h1>The Thing</h1>
+			<p>Directed by the legendary horror conisour John Carpenter, The Thing is as psychologically horrifying as it is visually. Based on the novel "Who Goes There", The Thing takes us to
+                an American research station deep in anartica where an alien parasite has been mysteriously leased from a nearby station and 
+                seems to imitate its host. Our protagonist Macready (Kurt Russel) and his team slowly succumb to the alien threat and paranoia. 
+            </p>
+            <p> This movie ranks as my favorite of John Carpenter's run of horror movies in the 80-90s. While Halloween and The Fog are campy and nostalgic cult hits in their own right, The Thing touches on human 
+                behavoir and themes that the other movies lack. The main theme really being paranoia. We are witnessing a group of men cut off from society and having to rely on each other. This isolation is beautifully amplified
+                by the alien threat being able to assimilate and appear as the crew themselves. It highlights the fear of people being not who they say they are. The fear that your friend may just be a wolf in sheeps clothing.
+            </p>
+			<table>
+				<tr>
+					<th>Director</th>
+					<td>John Carpenter</td>
+				</tr>
+				<tr>
+					<th>Cast</th>
+					<td>Kurt Russel, Keith David, Wilford Brimley</td>
+				</tr>
+				<tr>
+					<th>Genre</th>
+					<td>Horror, Psychological, Sci-Fi</td>
+				</tr>
+				<tr>
+					<th>Release Date</th>
+					<td>June 25, 1982</td>
+				</tr>
+				<tr>
+					<th>Runtime</th>
+					<td>109 minutes</td>
+				</tr>
+			</table>
+		</div>
+
+    <div class="formContainer">
+        <form class="reviewForm">
+          Enter your Email  
+          <input style="height:40px;width:300px;font-size: 15px;"type="text" name="email" id="email">
+          <br>
+      
+          <label for="side">Choose your own rating:</label>
+    
+          <select name="rating" id="rating">
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+          </select>
+          <br>
+    
+          <label for="comment">Comment:</label>
+          <textarea style="height:40px;width:500px;font-size: 15px;" id="comment" name="comment"></textarea><br><br>
+    
+          <input style="height:50px;width:80px;font-size: medium;" type="reset">
+          <button type="button" style="height:50px;width:80px;font-size: medium;" onclick="submitReview()">Submit</button>
+        </form>
+    </div>
+        <div class="reviews" id="review"></div>
+    
+        <script>
+          function submitReview() {
+            var email = document.getElementById("email").value;
+            var rating = document.getElementById("rating").value;
+            var comment = document.getElementById("comment").value;
+    
+            var review = document.getElementById("review");
+            review.innerHTML = review.innerHTML + "<p>Email: " + email + "</p><p>Rating: " + rating + "/5 <p> User Commented: " + comment + "</p></p>";
+            var numLetters = comment.replace(/[^a-z]/gi, '').length;
+            alert("Your comment has " + numLetters + " letters. Thanks for the comment!");
+          }
+        </script>
+        	</div>
+</body>
+</html>
