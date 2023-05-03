@@ -90,17 +90,12 @@ ul {
     background-color: #ccc;
   }
 
-.allMovies {
-    grid-row: 4;
-    grid-column: 1;
-}
-
-.RecentlyReviewed {
+.AllReviewed {
     grid-row: 3;
     grid-column: 1;
 }
 
-.movie-list-recently-reviewed {
+.movie-list-all-reviewed {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 10px;

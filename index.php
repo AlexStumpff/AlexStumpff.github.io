@@ -9,7 +9,7 @@
 	<div class="container">
     <div id="websiteHeader" class="websiteHeader">
         <div id="title"> Bear Cave Critic </div>
-            <img id="criticLogo" src="MoviePics/BearPaw.png" alt="Image">
+            <img id="criticLogo" src="MovieContent/BearPaw.png" alt="Image">
     </div>
     <nav>
       <ul>
@@ -22,12 +22,13 @@
         <li><a href="#">Home</a></li>
         <li><a href="AboutMe.html">About</a></li>
         <li><a href="#">Contact</a></li>
+        <li><a href="form.php">Write a review!</a></li>
       </ul>
     </nav>
 		<div class="box FavoriteMovies">
-      <h2>FavoriteMovies</h2>
+      <h2>Favorite Movies</h2>
       <div class="movie-favorite">
-        <img src="MoviePics/Nightcrawler.jpg" alt="Movie poster">
+        <img src="MovieContent/Nightcrawler.jpg" alt="Movie poster">
         <iframe height="120" width="150"
         src="https://www.youtube.com/embed/watch?v=1lEdwqwOttg">
         </iframe>
@@ -35,7 +36,7 @@
         <p>Movie Description</p>
       </div>
       <div class="movie-favorite">
-        <img src="MoviePics/TheThing.jpg" alt="Movie poster">
+        <img src="MovieContent/TheThing.jpg" alt="Movie poster">
         <iframe height="120" width="170" allowfullscreen="allowfullscreen"
         src="https://www.youtube.com/embed/5ftmr17M-a4">
         </iframe>
@@ -43,7 +44,7 @@
         <p>Movie Description</p>
       </div>
       <div class="movie-favorite">
-        <img src="MoviePics/CityOfGod.jpg" alt="Movie poster">
+        <img src="MovieContent/CityOfGod.jpg" alt="Movie poster">
         <iframe height="120" width="150"
         src="https://www.youtube.com/embed/watch?v=1lEdwqwOttg">
         </iframe>
@@ -51,43 +52,33 @@
         <p>Movie Description</p>
       </div>
     </div>
-		<div class="box RecentlyReviewed">
-      <h2>Recently Reviewed Movies</h2>
-      <div class="movie-list-recently-reviewed">
-        <div class="movie">
-          <img class="poster" src="MoviePics/theRoom.webp" alt="Movie 1">
-          <p>THE ROOM</p>
-        </div>
-        <div class="movie">
-          <img class="poster" src="MoviePics/theRoom.webp" alt="Movie 2">
-          <p>Movie 2</p>
-        </div>
-        <div class="movie">
-          <img class="poster" src="MoviePics/theRoom.webp" alt="Movie 3">
-          <p>Movie 3</p>
-        </div>
-        <div class="movie">
-          <img class="poster" src="MoviePics/theRoom.webp" alt="Movie 4">
-          <p>Movie 4</p>
-        </div>
-        <div class="movie">
-          <img class="poster" src="MoviePics/theRoom.webp" alt="Movie 5">
-          <p>Movie 5</p>
-        </div>
-        <div class="movie">
-          <img class="poster" src="MoviePics/theRoom.webp" alt="Movie 6">
-          <p>Movie 6</p>
-        </div>
+            <div class="box AllReviewed">
+              <h2>All Movies</h2>
+              <div class="movie-list-all-reviewed">
+                <?php
+                // Open the text file
+                $file = fopen("MovieContent/movielist.txt", "r");
+        
+                // Loop through the file and generate HTML code for each movie
+                while (!feof($file)) {
+                  $movie = trim(fgets($file));
+                  if ($movie != "") {
+                    echo '<div class="movie">';
+                    echo '<img class="poster" src="MovieContent/' . $movie . '.jpg" alt="' . $movie . '">';
+                    echo '<p><a href="' . $movie . 'Review.html">' . $movie . '</a></p>';
+                    echo '</div>';
+                  }
+                }
+        
+                // Close the text file
+                fclose($file);
+                ?>
+              </div>
+            </div>
+          </body>
+        </html>
+        
       </div>
   </body>
   </html>
-  
-  
-  
-  
-  
-  
-    </div>
-		<div class="box allNovies">LIST OF ALL MOVIES</div>
-	</div>
 </body>
